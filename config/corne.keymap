@@ -17,6 +17,23 @@
             #binding-cells = <1>;
             toggle-mode = "off";
         };
+
+        hyphenAccess: hyphenAccess {
+            compatible = "zmk,behavior-tap-dance";
+            label = "HYPHENACCESS";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SEMICOLON>, <&kp MINUS>;
+        };
+
+        tap_layer: tap_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_LAYER";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <10>;
+        };
     };
 
     keymap {
@@ -30,10 +47,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB        &kp Q  &kp W  &kp F  &kp P      &kp B        &kp J    &kp L      &kp U      &kp Y    &kp EQUAL  &kp BSPC
-&kp TAB        &kp A  &kp R  &kp S  &kp T      &kp G        &kp M    &kp N      &kp E      &kp I    &kp O      &kp SQT
-&kp BACKSLASH  &kp Z  &kp X  &kp C  &kp D      &kp V        &kp K    &kp H      &kp COMMA  &kp DOT  &kp FSLH   &kp SEMI
-                             &mo 1  &kp LSHFT  &kp SPACE    &kp RET  &kp LSHFT  &mo 2
+&kp LS(LA(LEFT_CONTROL))  &kp Q  &kp W  &kp F  &kp P      &kp B                 &kp J               &kp L      &kp U      &kp Y    &kp EQUAL  &kp BSPC
+&kp TAB                   &kp A  &kp R  &kp S  &kp T      &kp G                 &kp M               &kp N      &kp E      &kp I    &kp O      &kp SQT
+&kp BACKSLASH             &kp Z  &kp X  &kp C  &kp D      &kp V                 &kp K               &kp H      &kp COMMA  &kp DOT  &kp FSLH   &kp SEMI
+                                        &mo 1  &kp LSHFT  &tap_layer 2 SPACE    &tap_layer 2 ENTER  &kp LSHFT  &mo 2
             >;
         };
 
