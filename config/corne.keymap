@@ -46,7 +46,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             require-prior-idle-ms = <210>;
             quick-tap-ms = <150>;
         };
@@ -99,7 +99,7 @@
             bindings = <
 &kp TAB     &bl BL_TOG    &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &bl BL_CYCLE  &kp F5          &kp N6   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp BSPC
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4    &trans   &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT        &trans
-&kp LSHFT   &trans        &trans           &trans           &trans        &trans          &trans   &kp HOME        &trans          &trans          &kp END          &tog 1
+&kp LSHFT   &trans        &trans           &trans           &trans        &trans          &trans   &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP     &kp END          &tog 1
                                            &kp LGUI         &trans        &kp SPACE       &kp RET  &trans          &kp RALT
             >;
         };
@@ -121,10 +121,10 @@
 
         special_layer {
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5     &kp F6   &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&trans  &trans  &trans  &trans  &trans  &kp F11    &kp F12  &trans  &trans  &trans  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans   &trans  &trans  &trans  &trans   &tog 3
-                        &trans  &trans  &trans     &trans   &trans  &trans
+&trans  &kp F1  &kp F2  &kp F3      &kp F4  &kp F5     &kp F6   &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &trans  &trans  &trans      &trans  &kp F11    &kp F12  &trans  &trans  &trans  &trans   &trans
+&trans  &trans  &trans  &trans      &trans  &gresc     &trans   &trans  &trans  &trans  &trans   &tog 3
+                        &caps_word  &trans  &trans     &trans   &trans  &trans
             >;
         };
     };
