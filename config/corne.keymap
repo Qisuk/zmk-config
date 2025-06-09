@@ -38,6 +38,33 @@
             quick-tap-ms = <(-1)>;
             flavor = "balanced";
         };
+
+        slow_tap: slow_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SLOW_TAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+        };
+
+        fast_tap: fast_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "FAST_TAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
+    };
+
+    macros {
+        copy: copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "COPY";
+        };
     };
 
     keymap {
@@ -51,10 +78,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp LS(LA(LEFT_CONTROL))  &kp Q           &kp W           &kp F               &kp P             &kp B          &kp J        &kp L      &kp U             &kp Y    &kp EQUAL  &kp BSPC
-&kp TAB                   &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G          &kp M        &kp N      &kp E             &kp I    &kp O      &kp SQT
-&kp BACKSLASH             &kp Z           &kp X           &kp C               &kp D             &kp V          &kp K        &kp H      &kp COMMA         &kp DOT  &kp FSLH   &hyphenAccess
-                                                          &mo 1               &kp LSHFT         &lt 2 SPACE    &lt 2 ENTER  &kp LSHFT  &tap_layer 3 DEL
+&kp LS(LA(LEFT_CONTROL))  &kp Q                 &kp W                 &kp F                     &kp P                   &kp B                &kp J        &kp L                   &kp U              &kp Y                     &kp EQUAL              &kp BSPC
+&lt 1 TAB                 &slow_tap LEFT_GUI A  &slow_tap LEFT_ALT R  &slow_tap LEFT_CONTROL S  &fast_tap LEFT_SHIFT T  &kp G                &kp M        &fast_tap LEFT_SHIFT N  &slow_tap LCTRL E  &slow_tap LS(LEFT_ALT) I  &slow_tap RIGHT_WIN O  &kp SQT
+&kp BACKSLASH             &kp Z                 &slow_tap LC(X) X     &slow_tap LC(C) C         &kp D                   &slow_tap LC(V) V    &kp K        &kp H                   &kp COMMA          &kp DOT                   &kp FSLH               &hyphenAccess
+                                                                      &lt 1 TAB                 &kp LSHFT               &lt 2 SPACE          &lt 2 ENTER  &kp LSHFT               &tap_layer 3 DEL
             >;
         };
 
