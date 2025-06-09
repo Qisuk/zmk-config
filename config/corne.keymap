@@ -33,6 +33,8 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <10>;
+            quick-tap-ms = <(-1)>;
+            flavor = "balanced";
         };
     };
 
@@ -47,10 +49,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp LS(LA(LEFT_CONTROL))  &kp Q  &kp W  &kp F  &kp P      &kp B                 &kp J               &kp L      &kp U             &kp Y    &kp EQUAL  &kp BSPC
-&kp TAB                   &kp A  &kp R  &kp S  &kp T      &kp G                 &kp M               &kp N      &kp E             &kp I    &kp O      &kp SQT
-&kp BACKSLASH             &kp Z  &kp X  &kp C  &kp D      &kp V                 &kp K               &kp H      &kp COMMA         &kp DOT  &kp FSLH   &kp SEMI
-                                        &mo 1  &kp LSHFT  &tap_layer 2 SPACE    &tap_layer 2 ENTER  &kp LSHFT  &tap_layer 1 DEL
+&kp LS(LA(LEFT_CONTROL))  &kp Q  &kp W  &kp F  &kp P      &kp B          &kp J        &kp L      &kp U             &kp Y    &kp EQUAL  &kp BSPC
+&kp TAB                   &kp A  &kp R  &kp S  &kp T      &kp G          &kp M        &kp N      &kp E             &kp I    &kp O      &kp SQT
+&kp BACKSLASH             &kp Z  &kp X  &kp C  &kp D      &kp V          &kp K        &kp H      &kp COMMA         &kp DOT  &kp FSLH   &hyphenAccess
+                                        &mo 1  &kp LSHFT  &lt 2 SPACE    &lt 2 ENTER  &kp LSHFT  &tap_layer 1 DEL
             >;
         };
 
