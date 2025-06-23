@@ -96,10 +96,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none       &rgb_ug RGB_SPD  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp BSPC
-&none       &kp LGUI         &kp LALT         &kp LCTRL        &kp LSHFT        &rgb_ug RGB_BRD    &msc SCRL_DOWN  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &trans
-&bt BT_CLR  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &trans          &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &tog 1
-                                              &none            &trans           &kp SPACE          &kp RET         &mkp LCLK       &mkp MB3
+&none            &rgb_ug RGB_SPD  &none         &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp BSPC
+&rgb_ug RGB_TOG  &kp LGUI         &kp LALT      &kp LCTRL        &kp LSHFT        &rgb_ug RGB_BRD    &msc SCRL_DOWN  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &rgb_ug RGB_TOG
+&bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &trans          &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &tog 1
+                                                &none            &trans           &kp SPACE          &kp RET         &mkp LCLK       &mkp MB3
             >;
         };
 
