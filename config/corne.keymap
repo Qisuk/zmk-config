@@ -49,7 +49,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <210>;
+            require-prior-idle-ms = <150>;
             quick-tap-ms = <150>;
         };
 
@@ -61,6 +61,22 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             flavor = "tap-preferred";
+        };
+
+        delete_word_backspace: delete_word_backspace {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DELETE_WORD_BACKSPACE";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp LC(BACKSPACE)>;
+
+            tapping-term-ms = <190>;
+        };
+
+        delete_word_forward: delete_word_forward {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DELETE_WORD_FORWARD";
+            #binding-cells = <0>;
+            bindings = <&kp DELETE>, <&kp LC(DELETE)>;
         };
     };
 
@@ -84,7 +100,7 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&mt LS(LA(LEFT_CONTROL)) ESCAPE  &kp Q                 &kp W                 &kp F                     &slow_tap PRINTSCREEN P  &kp B                &kp J        &kp L                   &kp U              &kp Y                     &kp EQUAL              &kp BSPC
+&mt LS(LA(LEFT_CONTROL)) ESCAPE  &kp Q                 &kp W                 &kp F                     &slow_tap PRINTSCREEN P  &kp B                &kp J        &kp L                   &kp U              &kp Y                     &kp EQUAL              &delete_word_backspace
 &lt 1 TAB                        &slow_tap LEFT_GUI A  &slow_tap LEFT_ALT R  &slow_tap LEFT_CONTROL S  &fast_tap LEFT_SHIFT T   &kp G                &kp M        &fast_tap LEFT_SHIFT N  &slow_tap LCTRL E  &slow_tap LS(LEFT_ALT) I  &slow_tap RIGHT_WIN O  &kp SQT
 &kp NON_US_BACKSLASH             &kp Z                 &slow_tap LC(X) X     &slow_tap LC(C) C         &kp D                    &slow_tap LC(V) V    &kp K        &kp H                   &kp COMMA          &kp DOT                   &kp FSLH               &hyphenAccess
                                                                              &lt 1 TAB                 &kp LSHFT                &lt 2 SPACE          &lt 2 ENTER  &kp LSHFT               &lt 3 DEL
