@@ -59,7 +59,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <165>;
             flavor = "tap-preferred";
         };
 
@@ -108,7 +108,7 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&mt LS(LA(LEFT_CONTROL)) ESCAPE  &kp Q                 &kp W                 &kp F                     &slow_tap PRINTSCREEN P  &kp B                &kp J        &kp L                   &kp U              &kp Y                     &kp EQUAL              &delete_word_backspace
+&mt LS(LA(LEFT_CONTROL)) ESCAPE  &kp Q                 &kp W                 &slow_tap LC(F) F         &slow_tap PRINTSCREEN P  &slow_tap LC(B) B    &kp J        &kp L                   &kp U              &kp Y                     &kp EQUAL              &kp BACKSPACE
 &lt 1 TAB                        &slow_tap LEFT_GUI A  &slow_tap LEFT_ALT R  &slow_tap LEFT_CONTROL S  &fast_tap LEFT_SHIFT T   &kp G                &kp M        &fast_tap LEFT_SHIFT N  &slow_tap LCTRL E  &slow_tap LS(LEFT_ALT) I  &slow_tap RIGHT_WIN O  &kp SQT
 &kp NON_US_BACKSLASH             &kp Z                 &slow_tap LC(X) X     &slow_tap LC(C) C         &kp D                    &slow_tap LC(V) V    &kp K        &kp H                   &kp COMMA          &kp DOT                   &kp FSLH               &hyphenAccess
                                                                              &lt 1 TAB                 &kp LSHFT                &lt 2 SPACE          &lt 2 ENTER  &kp LSHFT               &lt 3 DEL
@@ -138,7 +138,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE      &trans            &trans  &kp LBRC  &kp RBRC  &kp PRCNT    &kp PLUS   &kp N1  &kp N2        &kp N3  &kp EQUAL        &kp BSPC
+&kp GRAVE      &trans            &trans  &kp LBRC  &kp RBRC  &kp PRCNT    &kp PLUS   &kp N1  &kp N2        &kp N3  &kp EQUAL        &delete_word_backspace
 &kp TAB        &kp LT            &kp GT  &kp LPAR  &kp RPAR  &trans       &kp MINUS  &kp N4  &kp N5        &kp N6  &kp NON_US_HASH  &kp AT
 &kp BACKSLASH  &kp SINGLE_QUOTE  &trans  &kp LBKT  &kp RBKT  &trans       &kp UNDER  &kp N7  &kp N8        &kp N9  &kp EXCL         &tog 2
                                          &kp LGUI  &trans    &kp LSHFT    &kp LSHFT  &trans  &kp NUMBER_0
