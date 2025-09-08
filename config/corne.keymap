@@ -109,7 +109,7 @@
 
             bindings = <
 &mt LS(LA(LEFT_CONTROL)) ESCAPE  &kp Q                 &kp W                 &slow_tap LC(F) F         &slow_tap PRINTSCREEN P  &slow_tap LC(B) B    &kp J        &kp L                   &kp U              &kp Y                     &kp EQUAL              &kp BACKSPACE
-&lt 1 TAB                        &slow_tap LEFT_GUI A  &slow_tap LEFT_ALT R  &slow_tap LEFT_CONTROL S  &fast_tap LEFT_SHIFT T   &kp G                &kp M        &fast_tap LEFT_SHIFT N  &slow_tap LCTRL E  &slow_tap LS(LEFT_ALT) I  &slow_tap RIGHT_WIN O  &kp SQT
+&lt 1 TAB                        &slow_tap LEFT_GUI A  &slow_tap LEFT_ALT R  &slow_tap LEFT_CONTROL S  &fast_tap LEFT_SHIFT T   &kp G                &kp M        &fast_tap LEFT_SHIFT N  &slow_tap RCTRL E  &slow_tap LS(LEFT_ALT) I  &slow_tap RIGHT_WIN O  &kp SQT
 &kp NON_US_BACKSLASH             &kp Z                 &slow_tap LC(X) X     &slow_tap LC(C) C         &kp D                    &slow_tap LC(V) V    &kp K        &kp H                   &kp COMMA          &kp DOT                   &kp FSLH               &hyphenAccess
                                                                              &lt 1 TAB                 &kp LSHFT                &lt 2 SPACE          &lt 2 ENTER  &kp LSHFT               &lt 3 DEL
             >;
