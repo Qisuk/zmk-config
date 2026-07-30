@@ -58,7 +58,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <165>;
+            tapping-term-ms = <140>;
             flavor = "tap-preferred";
         };
 
@@ -150,6 +150,15 @@
 &trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LS(LCTRL)  &kp LEFT_SHIFT  &kp F11            &kp F12          &trans  &trans  &trans  &trans   &rgb_ug RGB_TOG
 &trans  &trans        &trans        &trans         &kp SCROLLLOCK  &kp PAUSE_BREAK    &trans           &trans  &trans  &trans  &trans   &tog 3
                                     &caps_word     &trans          &kp LEFT_SHIFT     &kp RIGHT_SHIFT  &trans  &trans
+            >;
+        };
+
+        ShiftLayer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
