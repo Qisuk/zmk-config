@@ -58,8 +58,8 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
-            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            flavor = "balanced";
         };
 
         delete_word_backspace: delete_word_backspace {
