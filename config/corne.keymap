@@ -115,6 +115,20 @@
             bindings = <&kp LC(B) &kp DOWN>;
             label = "TMUX_NAV_DOWN";
         };
+
+        tmux_split_h: tmux_split_h {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp PERCENT>;
+            label = "TMUX_SPLIT_H";
+        };
+
+        tmux_split_v: tmux_split_v {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp DOUBLE_QUOTES>;
+            label = "TMUX_SPLIT_V";
+        };
     };
 
     keymap {
@@ -185,10 +199,10 @@
 
         tmux {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans        &trans          &trans          &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &tmux_nav_left  &tmux_nav_up  &tmux_nav_down  &tmux_nav_down  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans        &trans          &trans          &trans
-                        &trans  &trans  &trans    &trans  &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &tmux_split_v  &trans          &trans          &trans        &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &tmux_split_h  &tmux_nav_left  &tmux_nav_down  &tmux_nav_up  &tmux_nav_down  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans         &trans          &trans          &trans        &trans          &trans
+                        &trans  &trans  &trans    &trans         &trans          &trans
             >;
         };
     };
