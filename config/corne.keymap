@@ -88,13 +88,6 @@
     };
 
     macros {
-        copy: copy {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <>;
-            label = "COPY";
-        };
-
         tmux_nav_left: tmux_nav_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
